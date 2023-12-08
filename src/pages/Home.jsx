@@ -1,4 +1,4 @@
-import { Input ,Button, Stack,Box, Flex} from '@chakra-ui/react'
+import { Input ,Button, Stack,Box, Flex,Text} from '@chakra-ui/react'
 import React, {  useState } from 'react'
 
 const Home = () => {
@@ -25,12 +25,14 @@ Setlink(`https://birthdaybuddy-blue.vercel.app/christmas/${InputValue}`)
     <div>
 <Flex h="85px" bg={"blue.400"} color="white" align={"center"} justify={"center"} fontSize='5xl' fontWeight={"bold"} mb={"100px"} >Wish Your Friend</Flex>
 
-        <Stack direction={"column"} align={"center"} w={{md:"100%", lg:"70%"}} m={"auto"} >
+        <Stack direction={"column"} align={"center"} w={{md:"90%", lg:"70%"}} m={"auto"} >
+          <Box>Write Your Friend's Name</Box>
       <Input type="text" onChange={(e)=>SetInputValue(e.target.value)}/>
       <Button colorScheme='blue' onClick={HandleGenerate} mb={"40px"} >
         Generate
       </Button>
-      
+      <Text textAlign={"center"} >Click on Generate button then click on copy  button to copy the link and send it to your friend</Text>
+
       <Box border={link?"1px solid black":null} >
       {link}
       <Button onClick={handleCopyClick}>Copy</Button>

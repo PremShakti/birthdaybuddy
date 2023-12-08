@@ -5,7 +5,7 @@
 
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import { NavLink, useParams } from 'react-router-dom';
 
@@ -13,10 +13,17 @@ import { NavLink, useParams } from 'react-router-dom';
 const Crihstmas = () => {
     let { name } = useParams();
     const [audio] = useState(new Audio('../santam.mpeg'));
-
+const [playsong,setPlaysong]=useState(false)
     const playMusic = () => {
-      audio.play();
+      setPlaysong(!playsong)
+      if(playsong===true){
+        audio.play();
+      }else{
+        audio.pause();
+      }
     };
+
+
   
   return (
     <div className='bady' onClick={playMusic}>
