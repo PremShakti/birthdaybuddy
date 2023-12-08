@@ -10,7 +10,7 @@
 .homebtn{
   position: absolute;
   left: 10px;
-  bottom: 10px;
+  bottom: 30px;
   background-color: white;
   color: rgba(54, 0, 153, 0.815);
   padding: 6px;
@@ -207,15 +207,17 @@ padding-top: 20%;
   .balloon3{
     position: absolute;
     right: 0;
-    width: 100%;
+    width: 90%;
+ 
     
   }
 }
 @media screen and (max-width:850px) {
   .balloon1{
+    width: 100px;
     position: absolute;
     left: 20px;
-top: 30%;
+top: 40%;
     
   }
 }
