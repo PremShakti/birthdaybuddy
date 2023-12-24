@@ -50,7 +50,7 @@ const potli=()=>{
     <div className='balloon1'><img src="../h1.png" alt="photo" /></div>
     <div className='balloon2'><img src="../h2.png" alt="" /></div>
     <div className='balloon3'><img src="../h3.png" alt="" /></div>
-    <button className='homebtn' > <NavLink to={"/"}>Home</NavLink> </button>
+    <button className='homebtn' > <NavLink to={"/"}>Generate link and send your friends</NavLink> </button>
     
     </div>
   );
