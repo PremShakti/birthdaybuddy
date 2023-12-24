@@ -11,23 +11,27 @@ import { NavLink, useParams } from 'react-router-dom';
 
 
 const Crihstmas = () => {
+  const [playsong,setPlaysong]=useState(false)
+  const [potlibag,Setpotli]=useState(false)
     let { name } = useParams();
     const [audio] = useState(new Audio('../santam.mpeg'));
-const [playsong,setPlaysong]=useState(false)
     const playMusic = () => {
       setPlaysong(!playsong)
-      if(playsong===true){
+      if(playsong==true){
         audio.play();
+        Setpotli(true)
       }else{
         audio.pause();
       }
     };
 
-
+const potli=()=>{
+  
+}
   
   return (
     <div className='bady' onClick={playMusic}>
-       
+       {!potlibag?<div className='clickme' onClick={playMusic} ><img src="../potli.png" alt="potli" /></div>:null}
         <h1 className="happy-birthday">Merry Christmas {name} !</h1>
      
     <div className="birthday-message">
